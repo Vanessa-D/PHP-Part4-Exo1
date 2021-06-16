@@ -9,22 +9,26 @@
 </head>
 <body>
     <p>
-        Créer un lien avec les paramètres "nom", "prénom" et "âge" dirigeant vers la page courante, puis vers une autre page.</br>
-        Si l'âge est supérieur à 18 et inférieur à 130, afficher ces paramètres.</br>
-        L'âge ne peut être qu'un entier :
+        Créer un tableau contenant les 12 mois de l'année, afficher "Mars" : 
     </p>
     <div class="col-3 mx-auto mt-5 text-center" style="border: burlywood 2px solid;">
-        <!-- Lien auquel on donne des paramètres dans la barre du navigateur -->
-        <a href="index.php?nom=Gatto&amp;prenom=Evie">Lien Nom/Prénom dirigeant vers la page courante</a>
-        
         <?php
-            /* Variable GET --> variable Superglobale */
-            echo $_GET['prenom']. ' ' .$_GET['nom'];
-        ?>
 
+            $months = ['janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre'];
+            echo $months[2];
+            /* Affichage des détails du tableau (index, valeur, type) */
+            /*var_dump($months);*/
+
+        ?>
     </div>
+
     <div class="col-3 mx-auto mt-5 text-center" style="border: burlywood 2px solid;">
-        <a href="user.php?nom=Gatto&amp;prenom=Evie&amp;age=10">Lien Nom/Prénom/Age dirigeant vers une autre page avec une condition d'affichage</a>
+        <?php
+
+            $monthsBis = array('janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre');
+            echo $monthsBis[2];
+
+        ?>
     </div>
 </body>
 </html>
